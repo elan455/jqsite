@@ -1,0 +1,43 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>jquery events</title>
+    <script  type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+    
+    $(function () {
+        $("#slideUp").click( function() {
+            $("#theDiv").slideUp("normal");
+        });
+        $("#slideDown").click( function() {
+            $("#theDiv").slideDown("normal");
+        });
+        $("#slideToggle").click( function() {
+            $("#theDiv").slideToggle("normal");
+        });
+    });
+</script>
+    <style type="text/css">
+        .normal 
+        {
+         height: 200px;
+         width: 200px;
+         font-size:12px; 
+         background-color: Yellow;  
+        }
+        
+        .highlighted 
+        {
+          background-color: Red;  
+        }
+    </style>
+</head>
+<body>
+<h1>Binding Event Model</h1>
+
+<div id="theDiv" class="normal"></div>
+<input type="button" id="slideUp" value="Slide Up" />
+<input type="button" id="slideDown" value="Slide Down" />
+<input type="button" id="slideToggle" value="Slide Toggle" />
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>jquery events</title>
+    <script  type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("p[id^=para][lang*=en-]").css("border", "3px solid red");
+        }); 
+    </script>
+    <style type="text/css">
+    .a {color:Navy;}
+    .b {color:Maroon;}
+       
+    </style>
+
+</head>
+<body>
+<ul id="newlist">
+    <li class="a">item11</li>
+    <li class="a">item12</li>
+    <li class="b">item13</li>
+    <li class="b">item14</li>
+</ul>
+<p class="a">Paragraph 1</p>
+<p id="para1">Paragraph 2</p>
+<p class="b">Paragraph 3</p>
+<p id="para4" lang="en-us">Paragraph 4</p>
+</body>
+</html>

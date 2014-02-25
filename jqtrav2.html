@@ -1,0 +1,62 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title>jquery events</title>
+    <script  type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var listItems = $("li");
+            var para = $("p");
+            var thelist = $("#newlist");
+            //var listItems = $("li").css("border", "3px solid red");
+
+            //var special = listItems.filter(".special").css("border", "3px solid red");
+            //var notspecial = listItems.not(".special").css("border", "3px solid red");
+            //var hasSpans = para.has("span").css("border", "3px solid red");
+            //var firstli = listItems.first().css("border", "3px solid red");
+            // var lastli = listItems.last().css("border", "3px solid red");
+            //var sible = para.siblings().css("border", "3px solid red");
+            //var sible = para.first().next().css("border", "3px solid red");
+            //var addmore = thelist.add("#newlist li").html("newli");
+            //$('li').eq(1).toggleClass('hidden');
+            $('li').eq(1).on("mouseout",function (evt) {
+                
+                alert ( $(this).text());
+
+            });
+
+            $(document).on('click', function (event) {
+                alert(event.type);    // The event type, eg. "click"
+                console.log(event.which);   // The button or key that was pressed.
+                console.log(event.target);  // The originating element.
+                console.log(event.pageX);   // The document mouse X coordinate.
+                console.log(event.pageY);   // The document mouse Y coordinate.
+            });
+        });
+ 
+    </script>
+    <style type="text/css">
+    .hidden 
+    {
+     display:none;   
+    }
+    </style>
+
+</head>
+<body>
+<ul id="newlist">
+    <li class="special">item11</li>
+    <li class="a">item12</li>
+    <li>item13</li>
+    <li class="special">item14</li>
+</ul>
+<p class="a"><span>Paragraph 1</span></p>
+<p></p>
+<p class="b" lang="en-us">Paragraph 3</p>
+<p id="para4">Paragraph 4</p>
+
+<div>
+hello
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+    <style>
+        body 
+        {
+            text-align:center;   
+        }
+        .mylocation 
+        {
+         width:400px;
+         margin: 0px auto;
+         background-color:Blue;  
+           
+        }    
+    
+    </style>
+</head>
+<body>
+<div class="mylocation" id="wraqpper">
+<div id="mycalendar">
+
+</div>
+
+
+</div>
+<script>
+    var now = new Date();
+    var year = now.getFullYear();
+    var mon = now.getMonth();
+    var day = now.getDate();
+
+    YUI().use('calendar', function (Y) {
+
+        // Add the yui3-skin-sam class to the body so the default
+        // Calendar widget skin will be applied.
+        Y.one('body').addClass('yui3-skin-sam');
+
+        // Create a new instance of Calendar, setting its width 
+        // and height, allowing the dates from the previous
+        // and next month to be visible and setting the initial
+        // date to be November, 1982.
+        var calendar = new Y.Calendar({
+            contentBox: "#mycalendar",
+            height: '100px',
+            width: '400px',
+            showPrevMonth: true,
+            showNextMonth: true,
+            date: new Date(year, mon, day)
+        }).render();
+
+    });
+</script>
+
+</body>
+</html>
